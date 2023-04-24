@@ -22,7 +22,8 @@
                 </div>
             </div>
 
-            {{-- <img src="/assets/img/logo-large.svg" alt="{{ $page->siteName }} large logo" class="mx-auto mb-6 lg:mb-0 "> --}}
+            <img src="{{ url('/assets/img/logo-large.svg') }}" alt="{{ $page->siteName }} large logo"
+                class="mx-auto mb-6 lg:mb-0 ">
         </div>
 
         <hr class="block my-8 border lg:hidden">
