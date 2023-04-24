@@ -24,7 +24,7 @@
     <title>{{ $page->siteName }}{{ $page->title ? ' | ' . $page->title : '' }}</title>
 
     <link rel="home" href="{{ $page->baseUrl }}">
-    <link rel="icon" href="/extra_field/favicon.ico">
+    <link rel="icon" href="{{ url('/favicon.ico') }}">
 
     @stack('meta')
 
