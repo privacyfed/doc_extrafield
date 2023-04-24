@@ -24,7 +24,7 @@
     <title>{{ $page->siteName }}{{ $page->title ? ' | ' . $page->title : '' }}</title>
 
     <link rel="home" href="{{ $page->baseUrl }}">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/extra_field/favicon.ico">
 
     @stack('meta')
 
@@ -67,7 +67,7 @@
         @yield('body')
     </main>
 
-    <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
+    <script src="/extra_field{{ mix('js/main.js', 'assets/build') }}"></script>
 
     @stack('scripts')
 
