@@ -71,7 +71,7 @@
         @yield('body')
     </main>
 
-    <script src="/extra_field{{ mix('js/main.js', 'assets/build') }}"></script>
+    <script src="{{ url(mix('js/main.js', 'assets/build')) }}"></script>
 
     @stack('scripts')
 
