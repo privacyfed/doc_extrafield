@@ -35,7 +35,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i"
         rel="stylesheet">
     {{-- <link rel="stylesheet" href="/extra_field{{ mix('css/main.css', 'assets/build') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('assets/build') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/build') }}">
 
 
 
