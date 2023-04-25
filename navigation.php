@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'Getting Started' => [
-        'url' => 'doc_extrafield/getting-started',
+        'url' => 'docs/getting-started',
         'children' => [
             'Customizing Your Site' => 'docs/customizing-your-site',
             'Navigation' => 'docs/navigation',
