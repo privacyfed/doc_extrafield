@@ -12,7 +12,7 @@
                     static docs quickly and easily.</p>
 
                 <div class="flex my-10">
-                    <a href="/docs/getting-started" title="{{ $page->siteName }} getting started"
+                    <a href="{{ url('/doc_extrafield/getting-started') }}" title="{{ $page->siteName }} getting started"
                         class="bg-blue-500 hover:bg-blue-600 font-normal text-white hover:text-white rounded mr-4 py-2 px-6">Get
                         Started</a>
 

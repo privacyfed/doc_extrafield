@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 return [
     'baseUrl' => 'https://privacyfed.github.io/doc_extrafield/',
     'production' => false,
-    'siteName' => 'Docs Starter Template',
+    'siteName' => 'Modulo ExtraField',
     'siteDescription' => 'Beautiful docs powered by Jigsaw',
 
     // Algolia DocSearch credentials
