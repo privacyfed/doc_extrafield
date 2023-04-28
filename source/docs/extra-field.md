@@ -15,8 +15,8 @@ oppure Nome Completo (composto da Nome e Cognome)
 ## Tabella ExtraField
 
 Ogni ExtraField viene creato nella tabella ExtraField. Al suo interno verranno inseriti:  
-- nome del campo
-- tipo di campo (esempio stringa, radio, checkbox)
+1. nome del campo
+2. tipo di campo (esempio stringa, radio, checkbox)
 
 
 ## Tabella ExtraFieldMorph
