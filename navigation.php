@@ -23,7 +23,7 @@ return [
     ],
     'Componenti Livewire' => [
         'children' => [
-            'ExtraFieldGroups\By\Category' => 'docs/livewire/has-extra-field-groups',
+            'ExtraFieldGroups\By\Category.php' => 'docs/livewire/has-extra-field-groups',
         ],
     ],
 ];
