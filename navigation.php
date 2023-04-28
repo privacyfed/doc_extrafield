@@ -18,7 +18,12 @@ return [
     ],
     'I Traits' => [
         'children' => [
-            'HasExtraFieldGroups' => 'docs/has-extra-field-groups',
+            'HasExtraFieldGroups' => 'docs/traits/has-extra-field-groups',
+        ],
+    ],
+    'Componenti Livewire' => [
+        'children' => [
+            'ExtraFieldGroups\By\Category' => 'docs/livewire/has-extra-field-groups',
         ],
     ],
 ];
