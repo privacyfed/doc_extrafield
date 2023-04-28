@@ -21,9 +21,12 @@ Ogni ExtraField viene creato nella tabella ExtraField. Al suo interno verranno i
 2. tipo di campo (esempio stringa, radio, checkbox)
 
 
-## Tabella ExtraFieldMorph
+## Tabella ExtraFieldMorph ed ExtraFieldGroupMorph
 
 Ogni dato semplice (ExtraField) può essere abbinato a un profilo (modello Profile) oppure ad un servizio (modello Service).  
-Per migliorare la performance, il valore di extrafield è dato dal modello->extrafield.
+Per migliorare la performance, il valore di extrafield è dato dal modello->extrafield.  
+I valori vengono memorizzati sia nel campo value delle tabelle  
+1. ExtraFieldMorph  
+2. ExtraFieldGroupMorph  
 
 

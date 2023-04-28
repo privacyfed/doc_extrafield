@@ -6,7 +6,7 @@ section: content
 ---
 
 
-# Livewire Component ExtraFieldGroups\By\Category
+# Livewire Component ExtraFieldGroups\By\Category {#extrafieldgroups-by-category}
 
 Il componente Livewire ExtraFieldGroups\By\Category è utilizzato per visualizzare i gruppi di campi extra di un determinato modello, organizzati per categoria.
 
