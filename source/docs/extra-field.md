@@ -12,8 +12,13 @@ come per esempio Indirizzo Completo (composto da indirizzo e numero civico)
 oppure Nome Completo (composto da Nome e Cognome)
 
 
-# Tabella ExtraField
+## Tabella ExtraField
 
-Ogni ExtraField viene creato nella tabella ExtraField. Al suo interno verranno inseriti:
+Ogni ExtraField viene creato nella tabella ExtraField. Al suo interno verranno inseriti:  
 - nome del campo
 - tipo di campo (esempio stringa, radio, checkbox)
+
+
+## Tabella ExtraFieldMorph
+
+In questa tabella verranno memorizzati:
