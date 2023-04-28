@@ -188,6 +188,26 @@ blade</p>
 </code></pre>
 
 <p>Dove $model è un'istanza di HasExtraFieldGroupsContract.</p>
+
+<h1>Documentazione della View (blade)</h1>
+
+<h2>Struttura del codice</h2>
+
+<p>Il codice è diviso in due colonne, una di dimensione 4 e una di dimensione 8, all'interno di un contenitore div. La prima colonna contiene le informazioni del profilo, mentre la seconda colonna contiene una lista di gruppi appartenenti alle categorie del profilo.</p>
+
+<h2>Colonna del profilo</h2>
+
+<p>La colonna del profilo è composta da un elemento card, con una sezione header contenente il nome del profilo (ottenuto attraverso la funzione handle()) e una sezione body contenente l'immagine del profilo e una lista di categorie, ottenute attraverso la variabile $categories.</p>
+
+<p>Ogni categoria viene visualizzata tramite un elemento list-group-item, contenente un'icona e un link alla pagina della categoria. Viene inoltre visualizzato un badge che indica il numero di gruppi presenti nella categoria.</p>
+
+<h2>Colonna dei gruppi</h2>
+
+<p>La colonna dei gruppi è composta da un elemento card, con una sezione header contenente il nome della categoria selezionata e una sezione body contenente una lista di gruppi appartenenti alla categoria, ottenuti attraverso la variabile $groups.</p>
+
+<p>Per ogni gruppo viene inclusa una vista parziale, contenuta nel file group.v1, che visualizza le informazioni del gruppo, come il nome e la descrizione.</p>
+
+<p>In fondo alla colonna dei gruppi è presente un pulsante "Add Group", che permette di aggiungere un nuovo gruppo alla categoria selezionata.</p>
         </div>
     </div>
 </section>
