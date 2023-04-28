@@ -6,9 +6,9 @@ section: content
 ---
 ## I Dati Semplici {#extra_fields}
 
-I Dati Semplici (ExtraFields) sono i dati inseriti come Nome, Cognome, Indirizzo, Città.
-Insieme formano i Dati composti, 
-come per esempio Indirizzo Completo (composto da indirizzo e numero civico) 
+I Dati Semplici (ExtraFields) sono i dati inseriti come Nome, Cognome, Indirizzo, Città.  
+Insieme formano i Dati composti (modello ExtraFieldGroup),  
+come per esempio Indirizzo Completo (composto da indirizzo e numero civico)   
 oppure Nome Completo (composto da Nome e Cognome)
 
 
