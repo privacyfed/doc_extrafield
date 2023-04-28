@@ -21,7 +21,7 @@ Ogni ExtraField viene creato nella tabella ExtraField. Al suo interno verranno i
 
 ## Tabella ExtraFieldMorph
 
-In questa tabella verranno memorizzati:
+Ogni dato semplice (ExtraField) può essere abbiano a un profilo (modello Profile) oppure ad un servizio (modello Service).
 
 
 per migliorare la performance
