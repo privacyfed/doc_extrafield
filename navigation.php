@@ -13,4 +13,7 @@ return [
         ],
     ],
     'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
+    'Dati Composti e Semplici' => [
+        'url' => 'docs/extra-field',
+    ],
 ];
