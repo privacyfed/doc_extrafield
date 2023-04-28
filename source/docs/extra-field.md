@@ -15,10 +15,17 @@ oppure Nome Completo (composto da Nome e Cognome)
 ## Tabella ExtraField
 
 Ogni ExtraField viene creato nella tabella ExtraField. Al suo interno verranno inseriti:  
-1. nome del campo
+1. nome del campo  
 2. tipo di campo (esempio stringa, radio, checkbox)
 
 
 ## Tabella ExtraFieldMorph
 
 In questa tabella verranno memorizzati:
+
+
+per migliorare la performance
+da gruppo a extrafield c'è un hasmany tra loro 2
+il valore di extrafield è dato dal modello->extrafield
+
+
