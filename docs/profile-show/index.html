@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Documentazione del trait HasExtraFieldGroups">
+    <meta name="description" content="Documentazione della blade Profile Show">
 
     <meta property="og:site_name" content="Modulo ExtraField" />
-    <meta property="og:title" content="HasExtraFieldGroups | Modulo ExtraField" />
-    <meta property="og:description" content="Documentazione del trait HasExtraFieldGroups" />
-    <meta property="og:url" content="https://privacyfed.github.io/doc_extrafield/docs/has-extra-field-groups" />
+    <meta property="og:title" content="Profile Show | Modulo ExtraField" />
+    <meta property="og:description" content="Documentazione della blade Profile Show" />
+    <meta property="og:url" content="https://privacyfed.github.io/doc_extrafield/docs/profile-show" />
     <meta property="og:image" content="https://privacyfed.github.io/doc_extrafield/assets/img/logo.png" />
     <meta property="og:type" content="website" />
 
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     
-    <title>Modulo ExtraField | HasExtraFieldGroups</title>
+    <title>Modulo ExtraField | Profile Show</title>
 
     <link rel="home" href="https://privacyfed.github.io/doc_extrafield/">
     <link rel="icon" href="https://privacyfed.github.io/doc_extrafield/favicon.ico">
@@ -92,10 +92,27 @@
         <ul class="my-0">
             <li class="pl-4">
             
-        <a href="https://privacyfed.github.io/doc_extrafield/docs/has-extra-field-groups"
-            class="lvl1  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
+        <a href="https://privacyfed.github.io/doc_extrafield/docs/traits/has-extra-field-groups"
+            class="lvl1   nav-menu__item hover:text-blue-500"
         >
             HasExtraFieldGroups
+        </a>
+    
+    </li>
+    </ul>
+    </li>
+            <li class="pl-4">
+            
+        <p class="nav-menu__item text-gray-600">Componenti Livewire</p>
+    
+            
+        <ul class="my-0">
+            <li class="pl-4">
+            
+        <a href="https://privacyfed.github.io/doc_extrafield/docs/livewire/has-extra-field-groups"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            ExtraFieldGroups\By\Category
         </a>
     
     </li>
@@ -105,66 +122,19 @@
         </nav>
 
         <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
-            <h1 id="has-extra-field-groups">Documentazione del trait HasExtraFieldGroups</h1>
+            <h1 id="profile-show">Profile Show</h1>
 
-<p>Il trait HasExtraFieldGroups è una trait Laravel utilizzata per gestire i campi extra associati ai modelli. Questa trait fornisce diversi metodi utilizzati per gestire i gruppi di campi extra e i campi extra associati al modello.</p>
+<p>Questo codice Blade estende il layout adm_theme::layouts.app e definisce la sezione content.</p>
 
-<h2>Metodi</h2>
+<p>All'interno di questa sezione, il codice utilizza il componente Livewire extra-field-groups.by.category, passando come parametro il modello $profile->getProfile().</p>
 
-<h3>userExtraFieldGroups(string $user_id): MorphToMany</h3>
+<p>Successivamente, viene creato un ciclo foreach che itera attraverso i risultati del metodo $profile->getSubscriptionUps().</p>
 
-<p>Restituisce i gruppi di campi extra associati a un utente specificato.</p>
+<p>All'interno di questo ciclo, viene utilizzato il componente Blade x-card per creare una scheda di abbonamento per ciascuna sottoscrizione.</p>
 
-<h4>Parametri:</h4>
+<p>Viene utilizzato il componente x-slot per definire il titolo, il sottotitolo, la valuta, l'importo e il pulsante di pagamento per ogni scheda di abbonamento.</p>
 
-<pre><code>    $user_id (string): L'id dell'utente di cui si vogliono recuperare i gruppi di campi.
-</code></pre>
-
-<h4>Return:</h4>
-
-<pre><code>    MorphToMany: Una relazione di molti a molti tra il modello e i gruppi di campi extra associati all'utente specificato.
-</code></pre>
-
-<h3>noUserExtraFieldGroups(): MorphToMany</h3>
-
-<p>Restituisce i gruppi di campi extra non associati ad alcun utente.</p>
-
-<h4>Return:</h4>
-
-<pre><code>    MorphToMany: Una relazione di molti a molti tra il modello e i gruppi di campi extra che non sono associati ad alcun utente.
-</code></pre>
-
-<h3>extraFieldGroups(): MorphToMany</h3>
-
-<p>Restituisce tutti i gruppi di campi extra associati al modello.</p>
-
-<h4>Return:</h4>
-
-<pre><code>    MorphToMany: Una relazione di molti a molti tra il modello e i gruppi di campi extra.
-</code></pre>
-
-<h3>extraFieldsByUserId(?string $user_id): MorphToMany</h3>
-
-<p>Restituisce i campi extra associati a un utente specificato.</p>
-
-<h4>Parametri:</h4>
-
-<pre><code>    $user_id (string|null): L'id dell'utente di cui si vogliono recuperare i campi extra. Se non specificato, viene utilizzato l'id dell'utente autenticato.
-</code></pre>
-
-<h4>Return:</h4>
-
-<pre><code>    MorphToMany: Una relazione di molti a molti tra il modello e i campi extra associati all'utente specificato.
-</code></pre>
-
-<h3>extraFields(): MorphToMany</h3>
-
-<p>Restituisce tutti i campi extra associati al modello.</p>
-
-<h4>Return:</h4>
-
-<pre><code>    MorphToMany: Una relazione di molti a molti tra il modello e i campi extra.
-</code></pre>
+<p>Si noti che il file Blade utilizza anche i file di lingua per recuperare i valori delle chiavi di traduzione, come ad esempio  'extrafield::extra_fields.plan.light.title'</p>
         </div>
     </div>
 </section>
