@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="i dati semplici">
+    <meta name="description" content="Documentazione del Livewire Component Modal\Service\Add">
 
     <meta property="og:site_name" content="Modulo ExtraField" />
-    <meta property="og:title" content="Extra Field | Modulo ExtraField" />
-    <meta property="og:description" content="i dati semplici" />
-    <meta property="og:url" content="https://privacyfed.github.io/doc_extrafield/docs/extra-field" />
+    <meta property="og:title" content="Modal\Service\Add | Modulo ExtraField" />
+    <meta property="og:description" content="Documentazione del Livewire Component Modal\Service\Add" />
+    <meta property="og:url" content="https://privacyfed.github.io/doc_extrafield/docs/livewire/modal-service-add" />
     <meta property="og:image" content="https://privacyfed.github.io/doc_extrafield/assets/img/logo.png" />
     <meta property="og:type" content="website" />
 
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     
-    <title>Modulo ExtraField | Extra Field</title>
+    <title>Modulo ExtraField | Modal\Service\Add</title>
 
     <link rel="home" href="https://privacyfed.github.io/doc_extrafield/">
     <link rel="icon" href="https://privacyfed.github.io/doc_extrafield/favicon.ico">
@@ -77,8 +77,8 @@
             <ul class="my-0">
             <li class="pl-4">
             
-        <a href="https://privacyfed.github.io/doc_extrafield/docs/extra-field"
-            class="lvl0  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
+        <a href="https://privacyfed.github.io/doc_extrafield/docs/extrafield-and-extrafieldgroup"
+            class="lvl0   nav-menu__item hover:text-blue-500"
         >
             Dati Composti e Semplici
         </a>
@@ -122,32 +122,34 @@
         </nav>
 
         <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
-            <h2 id="extra_fields">I Dati Semplici</h2>
+            <h1 id="modal-service-add">Documentazione del Livewire Component Modal\Service\Add</h1>
 
-<p>I Dati Semplici (ExtraFields) sono i dati inseriti come Nome, Cognome, Indirizzo, Città.<br />
-Insieme formano i Dati composti (modello ExtraFieldGroup),<br />
-come per esempio Indirizzo Completo (composto da indirizzo e numero civico)<br />
-oppure Nome Completo (composto da Nome e Cognome).</p>
+<h2>Documentazione del codice</h2>
 
-<p>Quindi da un gruppo (ExtraFieldGroup) c'è una relazione hasmany con dati semplici (ExtraField).</p>
+<p>Il codice fornito rappresenta un componente Livewire che estende la classe Modal e permette di aggiungere un nuovo servizio.</p>
 
-<h2>Tabella ExtraField</h2>
+<h2>Struttura del codice</h2>
 
-<p>Ogni ExtraField viene creato nella tabella ExtraField. Al suo interno verranno inseriti:<br />
-1. nome del campo<br />
-2. tipo di campo (esempio stringa, radio, checkbox)</p>
+<p>Il componente Add è un componente Livewire che estende la classe Modal. La classe contiene tre proprietà pubbliche: $user_id, $form_data e $size.</p>
 
-<h2>Tabella ExtraFieldMorph ed ExtraFieldGroupMorph</h2>
+<p>La proprietà $user_id contiene l'ID dell'utente autenticato tramite la facades Auth, mentre la proprietà $form_data contiene i dati del form per l'aggiunta di un nuovo servizio. La proprietà $size viene impostata a '4xl' tramite il metodo statico attributes() e definisce la dimensione della modal.</p>
 
-<p>Ogni dato semplice (ExtraField) può essere abbinato a un profilo (modello Profile) oppure ad un servizio (modello Service).<br />
-Per migliorare la performance, il valore di extrafield è dato dal modello->extrafield.<br />
-I valori vengono memorizzati sia nel campo value delle tabelle<br />
-1. ExtraFieldMorph<br />
-2. ExtraFieldGroupMorph</p>
+<p>Il componente contiene il metodo mount(), che viene chiamato quando il componente viene caricato e imposta la proprietà $user_id e $form_data.</p>
 
-<p>In aggiunta, nella tabella ExtraFieldGroupMorph vengono salvate<br />
-1. le note inserite, relative al gruppo
-2. l'opzione favorite</p>
+<p>Il componente contiene anche i metodi statici attributes() e behavior(), che definiscono rispettivamente gli attributi e il comportamento della modal.</p>
+
+<p>Il metodo render() viene utilizzato per renderizzare la vista associata al componente, ottenuta attraverso la classe GetViewAction.</p>
+
+<h2>Documentazione della view (blade)</h2>
+
+<p>Il codice fornito rappresenta una modale che permette di aggiungere un nuovo servizio.
+Struttura del codice</p>
+
+<p>La modale è definita come un componente blade, che estende il componente modal.skin. Il componente modal.skin definisce lo scheletro della modale, mentre il componente wizard.service.add rappresenta il contenuto della modale.</p>
+
+<p>All'interno del componente modal.skin, viene definito un slot con nome "title", che contiene il titolo della modale. Il titolo viene ottenuto attraverso la funzione __('pfed::modal.title.add_service'), che recupera una stringa di traduzione dal file di lingua pfed.php.</p>
+
+<p>All'interno del componente modal.skin, viene definito un altro slot con nome "buttons", che contiene i pulsanti della modale. In questo caso, viene definito un pulsante di tipo "cancel" tramite il componente button, che emette un evento "modal.close" quando viene cliccato.</p>
         </div>
     </div>
 </section>
