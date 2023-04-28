@@ -23,7 +23,7 @@ Ogni ExtraField viene creato nella tabella ExtraField. Al suo interno verranno i
 
 ## Tabella ExtraFieldMorph
 
-Ogni dato semplice (ExtraField) può essere abbinato a un profilo (modello Profile) oppure ad un servizio (modello Service).
+Ogni dato semplice (ExtraField) può essere abbinato a un profilo (modello Profile) oppure ad un servizio (modello Service).  
 Per migliorare la performance, il valore di extrafield è dato dal modello->extrafield.
 
 
