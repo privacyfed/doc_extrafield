@@ -9,7 +9,9 @@ section: content
 I Dati Semplici (ExtraFields) sono i dati inseriti come Nome, Cognome, Indirizzo, Città.  
 Insieme formano i Dati composti (modello ExtraFieldGroup),  
 come per esempio Indirizzo Completo (composto da indirizzo e numero civico)   
-oppure Nome Completo (composto da Nome e Cognome)
+oppure Nome Completo (composto da Nome e Cognome).  
+
+Quindi da un gruppo (ExtraFieldGroup) c'è una relazione hasmany con dati semplici (ExtraField).
 
 
 ## Tabella ExtraField
@@ -21,11 +23,7 @@ Ogni ExtraField viene creato nella tabella ExtraField. Al suo interno verranno i
 
 ## Tabella ExtraFieldMorph
 
-Ogni dato semplice (ExtraField) può essere abbiano a un profilo (modello Profile) oppure ad un servizio (modello Service).
-
-
-per migliorare la performance
-da gruppo a extrafield c'è un hasmany tra loro 2
-il valore di extrafield è dato dal modello->extrafield
+Ogni dato semplice (ExtraField) può essere abbinato a un profilo (modello Profile) oppure ad un servizio (modello Service).
+Per migliorare la performance, il valore di extrafield è dato dal modello->extrafield.
 
 
