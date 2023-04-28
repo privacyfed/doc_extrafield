@@ -4,7 +4,7 @@ description: i dati semplici
 extends: _layouts.documentation
 section: content
 ---
-# Customizing Your Site {#customizing}
+# I Dati Semplici {#extra_fields}
 
 ## Styles
 
