@@ -4,8 +4,7 @@ description: i dati semplici
 extends: _layouts.documentation
 section: content
 ---
-# I Dati Semplici {#extra_fields}
+## I Dati Semplici {#extra_fields}
 
-## Styles
-
-This starter template comes pre-loaded with [Tailwind CSS](https://tailwindcss.com), a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS. There are also a few base Sass files in the `/source/_assets/sass` folder, set up with the expectation that you can add any custom CSS into `_documentation.scss`.
+I Dati Semplici (ExtraFields) sono i dati inseriti come Nome, Cognome, Indirizzo, Città.
+Insieme formano i Dati composti.
