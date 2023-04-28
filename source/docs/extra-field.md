@@ -29,4 +29,8 @@ I valori vengono memorizzati sia nel campo value delle tabelle
 1. ExtraFieldMorph  
 2. ExtraFieldGroupMorph  
 
+In aggiunta, nella tabella ExtraFieldGroupMorph vengono salvate  
+1. le note inserite, relative al gruppo
+2. l'opzione favorite
+
 

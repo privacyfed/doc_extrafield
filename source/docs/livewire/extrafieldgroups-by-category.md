@@ -68,3 +68,23 @@ blade
         <livewire:extra-field-groups.by.category :model="$model" />
 
 Dove $model è un'istanza di HasExtraFieldGroupsContract.
+
+# Documentazione della View (blade)
+
+## Struttura del codice
+
+Il codice è diviso in due colonne, una di dimensione 4 e una di dimensione 8, all'interno di un contenitore div. La prima colonna contiene le informazioni del profilo, mentre la seconda colonna contiene una lista di gruppi appartenenti alle categorie del profilo.
+
+## Colonna del profilo
+
+La colonna del profilo è composta da un elemento card, con una sezione header contenente il nome del profilo (ottenuto attraverso la funzione handle()) e una sezione body contenente l'immagine del profilo e una lista di categorie, ottenute attraverso la variabile $categories.
+
+Ogni categoria viene visualizzata tramite un elemento list-group-item, contenente un'icona e un link alla pagina della categoria. Viene inoltre visualizzato un badge che indica il numero di gruppi presenti nella categoria.
+
+## Colonna dei gruppi
+
+La colonna dei gruppi è composta da un elemento card, con una sezione header contenente il nome della categoria selezionata e una sezione body contenente una lista di gruppi appartenenti alla categoria, ottenuti attraverso la variabile $groups.
+
+Per ogni gruppo viene inclusa una vista parziale, contenuta nel file group.v1, che visualizza le informazioni del gruppo, come il nome e la descrizione.
+
+In fondo alla colonna dei gruppi è presente un pulsante "Add Group", che permette di aggiungere un nuovo gruppo alla categoria selezionata.
