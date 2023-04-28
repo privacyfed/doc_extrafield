@@ -24,6 +24,7 @@ return [
     'Componenti Livewire' => [
         'children' => [
             'ExtraFieldGroups\By\Category.php' => 'docs/livewire/extrafieldgroups-by-category',
+            'Modal\Service\Add' => 'docs/livewire/modal-service-add',
         ],
     ],
 ];
