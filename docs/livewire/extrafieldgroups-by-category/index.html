@@ -159,42 +159,46 @@ WireElements\Pro\Concerns\InteractsWithConfirmationModal
 
 <p>Il componente ha le seguenti proprietà pubbliche:</p>
 
-<pre><code>user_id: una stringa che rappresenta l'ID dell'utente autenticato
-cat_id: una stringa che rappresenta l'ID della categoria selezionata
-tpl: una stringa che rappresenta il nome del template da utilizzare per la visualizzazione
-model: un'istanza di HasExtraFieldGroupsContract che rappresenta il modello per il quale visualizzare i campi extra
-model_type: una stringa che rappresenta il tipo di modello
-model_id: una stringa che rappresenta l'ID del modello
-category_name: una stringa che rappresenta il nome della categoria selezionata
-</code></pre>
+<ul>
+<li>user_id: una stringa che rappresenta l'ID dell'utente autenticato</li>
+<li>cat_id: una stringa che rappresenta l'ID della categoria selezionata</li>
+<li>tpl: una stringa che rappresenta il nome del template da utilizzare per la visualizzazione</li>
+<li>model: un'istanza di HasExtraFieldGroupsContract che rappresenta il modello per il quale visualizzare i campi extra</li>
+<li>model_type: una stringa che rappresenta il tipo di modello</li>
+<li>model_id: una stringa che rappresenta l'ID del modello</li>
+<li>category_name: una stringa che rappresenta il nome della categoria selezionata</li>
+</ul>
 
 <h2>Metodi pubblici</h2>
 
 <p>Il componente ha i seguenti metodi pubblici:</p>
 
-<pre><code>mount(HasExtraFieldGroupsContract $model, string $tpl = 'v1'): questo metodo viene chiamato al momento del mount del componente e inizializza le proprietà pubbliche del componente
-render(): Renderable: questo metodo renderizza il componente e restituisce un'istanza di Illuminate\Contracts\Support\Renderable
-getGroups(Collection $categories): Collection: questo metodo restituisce una collezione di gruppi di campi extra organizzati per categoria
-showCat(string $cat_id): void: questo metodo imposta l'ID della categoria selezionata e il nome della categoria
-toggleFavourite(string $uuid): void: questo metodo gestisce l'azione di aggiungere o rimuovere un gruppo di campi extra dai preferiti
-addGroup(): void: questo metodo apre la modale per creare un nuovo gruppo di campi extra
-getFieldsByGroup(ExtraFieldGroup $group): EloquentCollection: questo metodo restituisce una collezione di campi extra per un determinato gruppo
-</code></pre>
+<ul>
+<li>mount(HasExtraFieldGroupsContract $model, string $tpl = 'v1'): questo metodo viene chiamato al momento del mount del componente e inizializza le proprietà pubbliche del componente</li>
+<li>render(): Renderable: questo metodo renderizza il componente e restituisce un'istanza di Illuminate\Contracts\Support\Renderable</li>
+<li>getGroups(Collection $categories): Collection: questo metodo restituisce una collezione di gruppi di campi extra organizzati per categoria</li>
+<li>showCat(string $cat_id): void: questo metodo imposta l'ID della categoria selezionata e il nome della categoria</li>
+<li>toggleFavourite(string $uuid): void: questo metodo gestisce l'azione di aggiungere o rimuovere un gruppo di campi extra dai preferiti</li>
+<li>addGroup(): void: questo metodo apre la modale per creare un nuovo gruppo di campi extra</li>
+<li>getFieldsByGroup(ExtraFieldGroup $group): EloquentCollection: questo metodo restituisce una collezione di campi extra per un determinato gruppo</li>
+</ul>
 
 <h2>Eventi</h2>
 
 <p>Il componente emette i seguenti eventi:</p>
 
-<pre><code>refresh: questo evento viene emesso quando è necessario aggiornare il componente
-</code></pre>
+<ul>
+<li>refresh: questo evento viene emesso quando è necessario aggiornare il componente</li>
+</ul>
 
 <h2>Utilizzo</h2>
 
 <p>Il componente può essere utilizzato all'interno di una vista Blade utilizzando il seguente codice:
 blade</p>
 
-<pre><code>    &lt;livewire:extra-field-groups.by.category :model="$model" /&gt;
-</code></pre>
+<ul>
+<li>&lt;livewire:extra-field-groups.by.category :model="$model" /></li>
+</ul>
 
 <p>Dove $model è un'istanza di HasExtraFieldGroupsContract.</p>
 
