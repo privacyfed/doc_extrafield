@@ -28,7 +28,7 @@ Il componente dipende dalle seguenti classi e interfacce:
     Modules\ExtraField\Models\ExtraFieldGroup
     Modules\ExtraField\Models\ExtraFieldGroupMorph
     Modules\Xot\Actions\GetModelTypeByModelAction
-    WireElements\Pro\Concerns\InteractsWithConfirmationModal
+    Modules\Wire\Concerns\InteractsWithConfirmationModal
 
 ## Proprietà pubbliche
 
