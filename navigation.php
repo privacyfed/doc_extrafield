@@ -15,6 +15,9 @@ return [
     // 'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
     'Dati Composti e Semplici' => [
         'url' => 'docs/extrafield-and-extrafieldgroup',
+        'children' => [
+            'Come Verificare un dato' => 'docs/data/how-verify-data',
+        ],
     ],
     'I Traits' => [
         'children' => [
