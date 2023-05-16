@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Documentazione del Livewire Component ExtraFieldGroups\By\Category">
+    <meta name="description" content="Gestione Attributi">
 
     <meta property="og:site_name" content="Modulo ExtraField" />
-    <meta property="og:title" content="ExtraFieldGroups\By\Category | Modulo ExtraField" />
-    <meta property="og:description" content="Documentazione del Livewire Component ExtraFieldGroups\By\Category" />
-    <meta property="og:url" content="https://privacyfed.github.io/doc_extrafield/docs/livewire/extrafieldgroups-by-category" />
+    <meta property="og:title" content="Gestione Attributi | Modulo ExtraField" />
+    <meta property="og:description" content="Gestione Attributi" />
+    <meta property="og:url" content="https://privacyfed.github.io/doc_extrafield/docs/data/attribute-management" />
     <meta property="og:image" content="https://privacyfed.github.io/doc_extrafield/assets/img/logo.png" />
     <meta property="og:type" content="website" />
 
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     
-    <title>Modulo ExtraField | ExtraFieldGroups\By\Category</title>
+    <title>Modulo ExtraField | Gestione Attributi</title>
 
     <link rel="home" href="https://privacyfed.github.io/doc_extrafield/">
     <link rel="icon" href="/favicon.ico">
@@ -77,7 +77,7 @@
             <li class="pl-4">
             
         <a href="https://privacyfed.github.io/doc_extrafield/docs/extrafield-and-extrafieldgroup"
-            class="lvl0   nav-menu__item hover:text-blue-500"
+            class="lvl0 lvl0-active  nav-menu__item hover:text-blue-500"
         >
             Dati Composti e Semplici
         </a>
@@ -96,7 +96,7 @@
             <li class="pl-4">
             
         <a href="https://privacyfed.github.io/doc_extrafield/docs/data/attribute-management"
-            class="lvl1   nav-menu__item hover:text-blue-500"
+            class="lvl1  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
         >
             Gestione Attributi
         </a>
@@ -130,7 +130,7 @@
             <li class="pl-4">
             
         <a href="https://privacyfed.github.io/doc_extrafield/docs/livewire/extrafieldgroups-by-category"
-            class="lvl1  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
+            class="lvl1   nav-menu__item hover:text-blue-500"
         >
             ExtraFieldGroups\By\Category.php
         </a>
@@ -142,96 +142,12 @@
         </nav>
 
         <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
-            <h1 id="extrafieldgroups-by-category">Livewire Component ExtraFieldGroups\By\Category</h1>
+            <h1>Come settare cardinality, can_verified, mandatory</h1>
 
-<p>Il componente Livewire ExtraFieldGroups\By\Category è utilizzato per visualizzare i gruppi di campi extra di un determinato modello, organizzati per categoria.</p>
-
-<h2>Dipendenze</h2>
-
-<p>Il componente dipende dalle seguenti classi e interfacce:</p>
-
-<pre><code>Illuminate\Contracts\Support\Renderable
-Illuminate\Database\Eloquent\Collection
-Illuminate\Support\Collection
-Illuminate\Support\Facades\Auth
-Livewire\Component
-Modules\Blog\Models\Category
-Modules\Cms\Actions\GetViewAction
-Modules\ExtraField\Actions
-Modules\ExtraField\Actions\GetExtraFieldGroupCategoriesByModelTypeAction
-Modules\ExtraField\Models\Contracts\HasExtraFieldGroupsContract
-Modules\ExtraField\Models\ExtraFieldGroup
-Modules\ExtraField\Models\ExtraFieldGroupMorph
-Modules\Xot\Actions\GetModelTypeByModelAction
-Modules\Wire\Concerns\InteractsWithConfirmationModal
-</code></pre>
-
-<h2>Proprietà pubbliche</h2>
-
-<p>Il componente ha le seguenti proprietà pubbliche:</p>
-
-<ul>
-<li>user_id: una stringa che rappresenta l'ID dell'utente autenticato</li>
-<li>cat_id: una stringa che rappresenta l'ID della categoria selezionata</li>
-<li>tpl: una stringa che rappresenta il nome del template da utilizzare per la visualizzazione</li>
-<li>model: un'istanza di HasExtraFieldGroupsContract che rappresenta il modello per il quale visualizzare i campi extra</li>
-<li>model_type: una stringa che rappresenta il tipo di modello</li>
-<li>model_id: una stringa che rappresenta l'ID del modello</li>
-<li>category_name: una stringa che rappresenta il nome della categoria selezionata</li>
-</ul>
-
-<h2>Metodi pubblici</h2>
-
-<p>Il componente ha i seguenti metodi pubblici:</p>
-
-<ul>
-<li>mount(HasExtraFieldGroupsContract $model, string $tpl = 'v1'): questo metodo viene chiamato al momento del mount del componente e inizializza le proprietà pubbliche del componente</li>
-<li>render(): Renderable: questo metodo renderizza il componente e restituisce un'istanza di Illuminate\Contracts\Support\Renderable</li>
-<li>getGroups(Collection $categories): Collection: questo metodo restituisce una collezione di gruppi di campi extra organizzati per categoria</li>
-<li>showCat(string $cat_id): void: questo metodo imposta l'ID della categoria selezionata e il nome della categoria</li>
-<li>toggleFavourite(string $uuid): void: questo metodo gestisce l'azione di aggiungere o rimuovere un gruppo di campi extra dai preferiti</li>
-<li>addGroup(): void: questo metodo apre la modale per creare un nuovo gruppo di campi extra</li>
-<li>getFieldsByGroup(ExtraFieldGroup $group): EloquentCollection: questo metodo restituisce una collezione di campi extra per un determinato gruppo</li>
-</ul>
-
-<h2>Eventi</h2>
-
-<p>Il componente emette i seguenti eventi:</p>
-
-<ul>
-<li>refresh: questo evento viene emesso quando è necessario aggiornare il componente</li>
-</ul>
-
-<h2>Utilizzo</h2>
-
-<p>Il componente può essere utilizzato all'interno di una vista Blade utilizzando il seguente codice:
-blade</p>
-
-<ul>
-<li>&lt;livewire:extra-field-groups.by.category :model="$model" /></li>
-</ul>
-
-<p>Dove $model è un'istanza di HasExtraFieldGroupsContract.</p>
-
-<h1>Documentazione della View (blade)</h1>
-
-<h2>Struttura del codice</h2>
-
-<p>Il codice è diviso in due colonne, una di dimensione 4 e una di dimensione 8, all'interno di un contenitore div. La prima colonna contiene le informazioni del profilo, mentre la seconda colonna contiene una lista di gruppi appartenenti alle categorie del profilo.</p>
-
-<h2>Colonna del profilo</h2>
-
-<p>La colonna del profilo è composta da un elemento card, con una sezione header contenente il nome del profilo (ottenuto attraverso la funzione handle()) e una sezione body contenente l'immagine del profilo e una lista di categorie, ottenute attraverso la variabile $categories.</p>
-
-<p>Ogni categoria viene visualizzata tramite un elemento list-group-item, contenente un'icona e un link alla pagina della categoria. Viene inoltre visualizzato un badge che indica il numero di gruppi presenti nella categoria.</p>
-
-<h2>Colonna dei gruppi</h2>
-
-<p>La colonna dei gruppi è composta da un elemento card, con una sezione header contenente il nome della categoria selezionata e una sezione body contenente una lista di gruppi appartenenti alla categoria, ottenuti attraverso la variabile $groups.</p>
-
-<p>Per ogni gruppo viene inclusa una vista parziale, contenuta nel file group.v1, che visualizza le informazioni del gruppo, come il nome e la descrizione.</p>
-
-<p>In fondo alla colonna dei gruppi è presente un pulsante "Add Group", che permette di aggiungere un nuovo gruppo alla categoria selezionata.</p>
+<p>andare nella pagina dei profili<br />
+ci sarà un componente livewire "gestione attributi" (che avrà come parametro il model_type, quindi se da pagina profilo, model_type = 'profile')
+si visualizzerà un elenco di extra_field_group_morph (gruppi composti) con model_type = profile e user_id = null
+selezionando una di essi si potranno settare i campi cardinality, can_verified, mandatory.</p>
         </div>
     </div>
 </section>
