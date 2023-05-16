@@ -17,6 +17,7 @@ return [
         'url' => 'docs/extrafield-and-extrafieldgroup',
         'children' => [
             'Come Verificare un dato' => 'docs/data/how-verify-data',
+            'Gestione Attributi' => 'docs/data/attribute-management',
         ],
     ],
     'I Traits' => [
