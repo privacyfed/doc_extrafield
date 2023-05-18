@@ -36,7 +36,11 @@ I valori vengono memorizzati sia nel campo value delle tabelle
 2. ExtraFieldGroupMorph  
 
 In aggiunta, nella tabella ExtraFieldGroupMorph vengono salvate  
-1. le note inserite, relative al gruppo
-2. l'opzione favorite
+1. le note inserite, relative al gruppo  
+2. l'opzione favorite  
+3. la cardinalità  
+4. il campo can_verified (determina se il gruppo può essere o no verificabile)
+5. il campo verified_by (determina quale mezzo è utilizzato per verificare il dato, es: email o sms)
+6. il mandatory
 
 
