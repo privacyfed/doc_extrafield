@@ -16,6 +16,7 @@ return [
     'Dati Composti e Semplici' => [
         'url' => 'docs/extrafield-and-extrafieldgroup',
         'children' => [
+            'Come Creare Dati' => 'docs/create',
             'Come Verificare un dato' => 'docs/data/how-verify-data',
             'Gestire cardinality, can_verified, mandatory, verified_by' => 'docs/data/attribute-management',
         ],
